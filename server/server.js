@@ -2,8 +2,8 @@
 const express = require('express');
 const app = express();
 require('./mongoose.config');
-const server = app.listen(8000, () =>
-    console.log('The server is all fired up on port 8000')
+const server = app.listen(5000, () =>
+    console.log('The server is all fired up on port 5000')
 );
 
 const io = require('socket.io')(server, { cors: true });

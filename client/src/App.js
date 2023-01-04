@@ -2,7 +2,7 @@ import { io } from "socket.io-client";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [socket] = useState(() => io(':8000'));
+  const [socket] = useState(() => io(':5000'));
   const [pollInformation, setpollInformation] = useState([])
 
   useEffect(() => {
@@ -16,9 +16,8 @@ function App() {
 
   function sendAnwer(answer) {
     socket.emit("answer", answer)
-    
-  }
 
+  }
 
   return (
     <div className="App">
